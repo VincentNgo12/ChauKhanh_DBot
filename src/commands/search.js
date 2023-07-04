@@ -19,7 +19,7 @@ module.exports = {
 
     async execute(client, message, args) {
         if (!args[0])
-            return message.reply({ content: `❌ | Please enter a valid song name.`, allowedMentions: { repliedUser: false } });
+            return message.reply({ content: `❌ | Làm ơn hãy nhập từ khóa hợp lệ.😮‍💨`, allowedMentions: { repliedUser: false } });
 
         const str = args.join(' ');
         let queryType = '';
@@ -37,7 +37,7 @@ module.exports = {
             });
 
         if (!results || !results.hasTracks())
-            return message.reply({ content: `❌ | No results found.`, allowedMentions: { repliedUser: false } });
+            return message.reply({ content: `❌ | Mình không tìm thấy bài này.😫`, allowedMentions: { repliedUser: false } });
 
 
         const queue = await client.player.nodes.create(message.guild, {
@@ -63,7 +63,7 @@ module.exports = {
         } catch (error) {
             console.log(error);
             if (!queue?.deleted) queue?.delete();
-            return message.reply({ content: `❌ | I can't join audio channel.`, allowedMentions: { repliedUser: false } });
+            return message.reply({ content: `❌ | Mình không join voice room được.😫😫`, allowedMentions: { repliedUser: false } });
         }
 
         await message.react('👍');
@@ -75,11 +75,11 @@ module.exports = {
                 await queue.node.play()
                     .catch((error) => {
                         console.log(error);
-                        return message.reply({ content: `❌ | I can't play this track.`, allowedMentions: { repliedUser: false } });
+                        return message.reply({ content: `❌ | Mình không hát dược bài này.😫😫`, allowedMentions: { repliedUser: false } });
                     });
             }
 
-            return message.reply({ content: "✅ | Music added.", allowedMentions: { repliedUser: false } });
+            return message.reply({ content: "✅ | Đã thêm bài nhạc.😮‍💨", allowedMentions: { repliedUser: false } });
         }
         else {
             let select = new StringSelectMenuBuilder()

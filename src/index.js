@@ -251,6 +251,13 @@ client.on('messageCreate', async function(msg){
 });
 
 
+// Greet when first join server
+client.on('guildCreate', guild => {
+    const channel = guild.channels.cache.find(channel => channel.type === 'GUILD_TEXT' && channel.permissionsFor(guild.me).has('SEND_MESSAGES'))
+    channel.send("Xin chào các bạn, mình là Châu Khánh. Rất vui được làm quen!😚😚😚")
+})
+
+
 
 // Login the bot
 Promise.resolve()

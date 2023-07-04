@@ -28,7 +28,7 @@ const cst = {
     config: {
         name                : 'Music Disc',
         prefix              : '+',
-        playing             : '+help | music',
+        playing             : 'Hát cho Huy nghe.😊😊😊',
         defaultVolume       : 50,
         maxVolume           : 100,
         autoLeave           : true,

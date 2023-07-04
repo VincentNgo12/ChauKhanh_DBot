@@ -68,12 +68,12 @@ const registerPlayerEvents = (player, client) => {
             if (queue.tracks.data.length < 1) {
                 if (!queue.deleted) queue.delete();
                 finishPlaying(queue);
-                return queue.metadata.channel.send({ content: `❌ | I can't play Age-restricted videos.`, allowedMentions: { repliedUser: false } });
+                return queue.metadata.channel.send({ content: `❌ | Ê, hình như bài này bị giới hạn độ tuổi.😳😳😳`, allowedMentions: { repliedUser: false } });
             }
 
             else {
                 queue.node.skip();
-                return queue.metadata.channel.send({ content: `❌ | I skipped Age-restricted video.`, allowedMentions: { repliedUser: false } });
+                return queue.metadata.channel.send({ content: `❌ | Mình bỏ qua bài này nha.😳😳😳`, allowedMentions: { repliedUser: false } });
             }
         }
     });

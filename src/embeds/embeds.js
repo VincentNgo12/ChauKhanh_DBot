@@ -29,7 +29,7 @@ module.exports = {
             .setTitle(music_title)
             .setURL(music_url)
             .setThumbnail(music_thumbnail)
-            .addFields({ name: status, value: `Author : **${music_author}**\nDuration **${music_length}**`, inline: true })
+            .addFields({ name: status, value: `Tác giả : **${music_author}**\nThời lượng **${music_length}**`, inline: true })
             .setTimestamp()
         return Embed_add;
     },
@@ -87,7 +87,7 @@ module.exports = {
     Embed_help2: function (command, description) {
         const Embed_help2 = new Discord.EmbedBuilder()
             .setColor(color)
-            .setTitle(`Command **${command}**`, '')
+            .setTitle(`Lệnh **${command}**`, '')
             .setDescription(description)
         return Embed_help2;
     },
@@ -126,14 +126,14 @@ module.exports = {
     Embed_connect: function () {
         const Embed_connect = new Discord.EmbedBuilder()
             .setColor(color)
-            .setDescription('Voice channel connected successfully.')
+            .setDescription('Mình vô được voice room rồi nha!😚')
         return Embed_connect;
     },
 
     Embed_disconnect: function () {
         const Embed_disconnect = new Discord.EmbedBuilder()
             .setColor(color)
-            .setDescription('Finished playing.')
+            .setDescription('Mình hát xong rồi đó!😋😋😋')
         return Embed_disconnect;
     }
 }

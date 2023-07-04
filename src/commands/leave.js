@@ -27,6 +27,6 @@ module.exports = {
         if (!queue.deleted)
             queue.delete();
 
-        return interaction.reply('✅ | Bot leave.');
+        return interaction.reply('✅ | Bye Bye!😚😚😚');
     },
 };

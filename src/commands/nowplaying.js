@@ -39,14 +39,14 @@ module.exports = {
         const queue = client.player.nodes.get(interaction.guild.id);
 
         if (!queue || !queue.isPlaying())
-            return interaction.reply({ content: `❌ | There is no music currently playing.`, allowedMentions: { repliedUser: false } });
+            return interaction.reply({ content: `❌ | Mình đâu có hát cài gì đâu.😳`, allowedMentions: { repliedUser: false } });
 
 
         const track = queue.currentTrack;
         const progress = queue.node.createProgressBar();
         const timestamp = queue.node.getTimestamp();
         const trackDuration = timestamp.progress == 'Forever' ? 'Endless (Live)' : track.duration;
-        let description = `Author : **${track.author}**\nDuration **${trackDuration}**\n`
+        let description = `Tác Giả : **${track.author}**\nThời lượng **${trackDuration}**\n`
             + '\n'
             + `${progress} (**${timestamp.progress}**%)`;
 

@@ -10,7 +10,7 @@ module.exports = {
         const queue = client.player.nodes.get(message.guild.id);
 
         if (!queue || !queue.isPlaying())
-            return message.reply({ content: `❌ | There is no music currently playing!.`, allowedMentions: { repliedUser: false } });
+            return message.reply({ content: `❌ | Mình đâu có hát cài gì đâu.😳`, allowedMentions: { repliedUser: false } });
 
         const progress = queue.node.createProgressBar();
         const timestamp = queue.node.getTimestamp();
